@@ -1,0 +1,74 @@
+<div class="container mt-4">
+
+    <h1>Los ciclos tecnológicos son</h1><br><br>
+
+    <div class="row">
+
+        <div class="col m-2">
+
+            <h2>DAM</h2><br>
+
+            <p>Asignaturas:</p>
+
+            <table class="table tab table-bordered">
+
+                <tbody>
+
+                    <tr *ngFor="let item of asignaturaFiltroDam">
+
+                        <td class="row">{{item.nombre}}</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="col m-2">
+
+            <h2>DAW</h2><br>
+
+            <p>Asignaturas:</p>
+
+            <table class="table tab table-bordered">
+
+                <tbody>
+
+                    <tr *ngFor="let item of asignaturaFiltroDaw">
+
+                        <td class="row">{{item.nombre}}</td>
+                        
+                    </tr>
+
+                </tbody>
+
+            </table>
+            
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col" *ngFor="let item of ciclos">
+
+            <div class="card" style="width: 18rem;">
+
+                <img [src]="item.imagen" class="card-img-top">
+
+                <div class="card-body">
+                  <h5 class="card-title">{{item.curso}}{{item.nombre}}</h5>
+                  <a class="btn btn-primary" (click)="getInfoDetalle(item.curso, item.nombre)">Ver detalle</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+</div>

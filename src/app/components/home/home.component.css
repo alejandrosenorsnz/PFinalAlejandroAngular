@@ -1,0 +1,11 @@
+.tab {
+  width: 60%;
+  margin: auto;
+}
+
+h1,
+p,
+button {
+  text-align: auto;
+  margin-left: 260px;
+}
